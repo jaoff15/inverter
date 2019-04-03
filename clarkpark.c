@@ -17,7 +17,7 @@ void clarkPark(double *iD, double *iQ, double iA, double iB, double iC, double a
 
 	// Write to output
 	*iD = tmp_iD;
-	*iQ = tmpiQ;
+	*iQ = tmp_iQ;
 }
 
 
@@ -46,16 +46,21 @@ void invClarkPark(double *iA, double *iB, double *iC, double iD, double iQ, doub
 
 // The Clark function
 void clark(double *iAlpha, double *iBeta, double iA, double iB, double iC){
-	// Scaled version
+	// Power Invariant Version
 	// *iAlpha = TWO_THIRDS * iA - ONE_THIRD * (iB - iC);
 	// *iBeta  = TWO_OVER_SQRT_THREE * (iB - iC);
-	// None scaled version
-	*iAlpha = iA + (-HALF * iB) + (-HALF * iC);
-	*iBeta  = (SQRT_THREE_OVER_TWO * iB) + (-SQRT_THREE_OVER_TWO * iC);
+	// Power Variant Version
+	*iAlpha = TWO_THIRDS * iA - ONE_THIRD * iB - ONE_THIRD * iC;
+	*iBeta  = SQRT_THREE_OVER_THREE * iB - SQRT_THREE_OVER_THREE * iC;
 }
 
 // The inverse Clark function
 void invClark(double *iA, double *iB, double *iC, double iAlpha, double iBeta){
+	// Power Invariant Version
+	// *iA = (1/3)*sqrt(2)*sqrt(3)*iAlpha;
+	// *iB = (1/2)*sqrt(2)*iBeta-(1/6)*sqrt(6)*iAlpha;
+	// *iC = -(1/6)*sqrt(6)*iAlpha-(1/2)*sqrt(2)*iBeta;
+	// Power Variant Version
 	*iA = iAlpha;
 	*iB = -HALF * iAlpha + SQRT_THREE_OVER_TWO * iBeta;
 	*iC = -HALF * iAlpha - SQRT_THREE_OVER_TWO * iBeta;
