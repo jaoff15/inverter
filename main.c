@@ -1,6 +1,6 @@
 
 #include <stdio.h>
-#include "clarkpark.h"
+#include "clarkepark.h"
 
 void main(){
 	// Measurements	
@@ -14,12 +14,12 @@ void main(){
 
 	double iD;
 	double iQ;
-	clarkPark(&iD, &iQ, iA, iB, iC, angle);
+	clarkePark(&iD, &iQ, iA, iB, iC, angle);
 	
 	double new_iA = 0;
 	double new_iB = 0;
 	double new_iC = 0;
-	invClarkPark(&new_iA, &new_iB, &new_iC, iD, iQ, angle);
+	invClarkePark(&new_iA, &new_iB, &new_iC, iD, iQ, angle);
 
 
 
