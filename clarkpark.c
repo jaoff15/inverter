@@ -46,8 +46,12 @@ void invClarkPark(double *iA, double *iB, double *iC, double iD, double iQ, doub
 
 // The Clark function
 void clark(double *iAlpha, double *iBeta, double iA, double iB, double iC){
-	*iAlpha = TWO_THIRDS * iA - ONE_THIRD * (iB - iC);
-	*iBeta  = TWO_OVER_SQRT_THREE * (iB - iC);
+	// Scaled version
+	// *iAlpha = TWO_THIRDS * iA - ONE_THIRD * (iB - iC);
+	// *iBeta  = TWO_OVER_SQRT_THREE * (iB - iC);
+	// None scaled version
+	*iAlpha = iA + (-HALF * iB) + (-HALF * iC);
+	*iBeta  = (SQRT_THREE_OVER_TWO * iB) + (-SQRT_THREE_OVER_TWO * iC);
 }
 
 // The inverse Clark function
