@@ -3,22 +3,22 @@
 #include "dutycycle.h"
 
 /* Function to find the duty cycle for all phases */
-void getDutyCycles(float va, float vb, float vc, float *dcA, float *dcB, float *dcC){
+void getDutyCycles(double va, double vb, double vc, double *dcA, double *dcB, double *dcC){
 	// Find current sector
 	int sector = getSector(va, vb, vc);
 
 	// Get the boundaries of the current sector
-	float t1, t2;
+	double t1, t2;
 	getSectorBoundaries(sector, &t1, &t2);		
 
 
 	// Saturate the boundaries
-	float t1sat, t2sat;
+	double t1sat, t2sat;
 	getSaturatedBoundaries(t1, t2, &t1sat, &t2sat);	
 
 
 	// Find on times for the 3 phases
-	float tAon, tBon, tCon;
+	double tAon, tBon, tCon;
 	getOnTimes(t1, t2, &tAon, &tBon, &tCon);
 
 	// Assign the right duty cycle to the right motor phase
@@ -26,7 +26,7 @@ void getDutyCycles(float va, float vb, float vc, float *dcA, float *dcB, float *
 }
 
 
-static void assignDutyCycles(int sector, float tAon, float tBon, float tCon, float *dcA, float * dcB, float *dcC){
+static void assignDutyCycles(int sector, double tAon, double tBon, double tCon, double *dcA, double * dcB, double *dcC){
 	switch(sector){
 	case 1:
 		*dcA = tBon;
@@ -65,7 +65,7 @@ static void assignDutyCycles(int sector, float tAon, float tBon, float tCon, flo
 
 
 /* Function to get the current section */
-static int getSector(float va, float vb, float vc){
+static int getSector(double va, double vb, double vc){
 	int a,b,c;
 	if(va > 0){
 		a = 1;
@@ -86,8 +86,8 @@ static int getSector(float va, float vb, float vc){
 }
 
 /* Function to get the sector boundaries */
-static void getSectorBoundaries(int sector, float *t1, float *t2){
-	float x,y,z;	
+static void getSectorBoundaries(int sector, double *t1, double *t2){
+	double x,y,z;	
 	switch(sector){
 	case 1:
 		*t1 =  z;
@@ -119,15 +119,15 @@ static void getSectorBoundaries(int sector, float *t1, float *t2){
 }
 
 /* Function used to saturate the boundaries */
-static void getSaturatedBoundaries(float t1, float t2, float *t1sat, float *t2sat){
-	float counterTime = getPwmCounterTime();
+static void getSaturatedBoundaries(double t1, double t2, double *t1sat, double *t2sat){
+	double counterTime = getPwmCounterTime();
 	if(t1+t2 > counterTime){
 		*t1sat = t1 * (counterTime)/(t1+t2);
 		*t2sat = t2 * (counterTime)/(t1+t2);
 	}
 }
 
-static void getOnTimes(float t1, float t2, float *tAon, float *tBon, float *tCon){
+static void getOnTimes(double t1, double t2, double *tAon, double *tBon, double *tCon){
 	*tAon = (getPwmCounterTime()-t1-t2)/2;
 	*tBon = *tAon + t1;
 	*tCon = *tBon + t2;
@@ -137,17 +137,17 @@ static void getOnTimes(float t1, float t2, float *tAon, float *tBon, float *tCon
 /* Helper functions */
 
 /* Get the PWM counter's max value */
-static float getPwmCounterMax(){
+static double getPwmCounterMax(){
 	return PWM_COUNTER_MAX;
 }
 
 /* Get the PWM counter frequency */
-static float getPwmFrequency(){
+static double getPwmFrequency(){
 	return PWM_COUNTER_FREQUENCY; //[ns]
 }
 
 /* Get the PWM counter time */
-static float getPwmCounterTime(){
+static double getPwmCounterTime(){
 	return getPwmCounterMax() * getPwmFrequency(); //[ns]
 }
 

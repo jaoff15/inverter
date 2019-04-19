@@ -6,30 +6,30 @@
 
 
 /* Function to find the duty cycle for all phases */
-void getDutyCycles(float ia, float ib, float ic, float *dcA, float *dcB, float *dcC);
+void getDutyCycles(double ia, double ib, double ic, double *dcA, double *dcB, double *dcC);
 
-static void assignDutyCycles(int sector, float tAon, float tBon, float tCon, float *dcA, float * dcB, float *dcC);
+static void assignDutyCycles(int sector, double tAon, double tBon, double tCon, double *dcA, double * dcB, double *dcC);
 
 /* Function to get the current section */
-static int getSector(float ia, float ib, float ic);
+static int getSector(double ia, double ib, double ic);
 
 /* Function to get the sector boundaries */
-static void getSectorBoundaries(int sector, float *t1, float *t2);
+static void getSectorBoundaries(int sector, double *t1, double *t2);
 
 /* Function used to saturate the boundaries */
-static void getSaturatedBoundaries(float t1, float t2, float *t1sat, float *t2sat);
+static void getSaturatedBoundaries(double t1, double t2, double *t1sat, double *t2sat);
 
-static void getOnTimes(float t1, float t2, float *tAon, float *tBon, float *tCon);
+static void getOnTimes(double t1, double t2, double *tAon, double *tBon, double *tCon);
 
 
 /* Helper functions */
 /* Get the PWM counter's max value */
-static float getPwmCounterMax();
+static double getPwmCounterMax();
 
 /* Get the PWM counter frequency */
-static float getPwmFrequency();
+static double getPwmFrequency();
 
 /* Get the PWM counter time */
-static float getPwmCounterTime();
+static double getPwmCounterTime();
 
 
