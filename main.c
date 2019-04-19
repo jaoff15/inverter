@@ -3,7 +3,7 @@
 #include "dutycycle.h"
 #include "math.h"
 #include "clarkepark.h"
-
+#include "phase3.h"
 
 void main(){
 
@@ -11,7 +11,7 @@ void main(){
 	double angle = 0;
 	double iA = -0.809207777821378;
 	double iB = -0.104205583519848;
-	double iC = 0.913413361341225;
+	double iC = getPhase3(phase1, phase2);
 
 
 	double iD, iQ;
