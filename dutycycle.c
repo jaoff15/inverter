@@ -151,4 +151,10 @@ static double getPwmCounterTime(){
 	return getPwmCounterMax() * getPwmFrequency(); //[ns]
 }
 
+double rad2deg(double angle){
+	return RAD_TO_DEG * angle;
+}
+double deg2rad(double angle){
+	return DEG_TO_RAD * angle;
+}
 

@@ -15,12 +15,12 @@ void main(){
 
 
 	double iD, iQ;
-	clarkePark(&iD, &iQ, iA, iB, iC, angle);
+	clarkePark(&iD, &iQ, iA, iB, iC, deg2rad(angle));
 	
 	double va = 0;
 	double vb = 0;
 	double vc = 0;
-	invClarkePark(&va, &vb, &vc, iD, iQ, angle);
+	invClarkePark(&va, &vb, &vc, iD, iQ, deg2rad(angle));
 
 	double dcA, dcB, dcC;
 	getDutyCycles((double)va, (double)vb, (double)vc, &dcA, &dcB, &dcC);
