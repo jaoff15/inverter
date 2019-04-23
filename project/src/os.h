@@ -8,6 +8,8 @@
 #include <stdio.h>
 
 /* Defines */
+#define COUNTER_SPEED 500000 // 0.5 s / 500ms
+
 #define CYCLE_TIME_1 1
 #define CYCLE_TIME_2 2
 #define CYCLE_TIME_3 4

@@ -12,7 +12,7 @@ void rtc(){
 	while(1){
 		/* Handle conditions for cyclic scheduling */
 		counter++;				// Increment counter
-		if(counter > 1000){
+		if(counter > COUNTER_SPEED){
 			cyclicRun = TRUE;	// Set flag
 			counter = 0;		// Reset counter
 			runs++;				// Increment run counter
@@ -32,7 +32,7 @@ void rtc(){
 			break;
 		}
 
-		usleep(500);			// Sleep
+		usleep(1);			// Sleep
 	}
 }
 
