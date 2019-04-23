@@ -4,7 +4,8 @@
 
 
 #include <stdio.h>
-#include "math.h"
+
+#include "../headers/math.h"
 
 
 

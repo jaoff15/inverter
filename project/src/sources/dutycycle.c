@@ -1,6 +1,6 @@
 
 
-#include "dutycycle.h"
+#include "../headers/dutycycle.h"
 
 /* Function to find the duty cycle for all phases */
 void getDutyCycles(double va, double vb, double vc, double *dcA, double *dcB, double *dcC){

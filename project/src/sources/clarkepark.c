@@ -1,6 +1,6 @@
 
 
-#include "clarkepark.h"
+#include "../headers/clarkepark.h"
 
 
 // Combined clarke and park function. Performs both functions
