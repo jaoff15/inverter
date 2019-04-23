@@ -30,6 +30,7 @@ unsigned int interruptRun;			// Flag to signal the interrupt scheduler to run
 
 /* Function declarations */
 /* Run-To-Completion OS */
+void initRtc();
 void rtc();
 
 /* Interrupt Service Routine for signaling the interrupt scheduler */

@@ -8,7 +8,8 @@
 void readMemory(addr_typ _addr, data_typ *data){
 	addr_typ addr = BASE_ADDRESS + (8 * _addr);
 
-	printf("Address: %lu \n",addr);
+//	printf("Address: %lu \n",addr);
+	data = 0x00000000;
 	//Xil_In64(addr, data);
 }
 
@@ -16,6 +17,6 @@ void readMemory(addr_typ _addr, data_typ *data){
 void writeMemory(addr_typ _addr, data_typ data){
 	addr_typ addr = BASE_ADDRESS + (8 * _addr);
 
-	printf("Address: %lu \n",addr);
+//	printf("Address: %lu \n",addr);
 	//Xil_Out64(addr, data);
 }

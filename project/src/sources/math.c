@@ -21,5 +21,12 @@ double fastCos(double angle){
 
 
 
+/* Convert from radians to degrees */
+double rad2deg(double angle){
+	return RAD_TO_DEG * angle;
+}
 
-
+/* Convert from degrees to radians */
+double deg2rad(double angle){
+	return DEG_TO_RAD * angle;
+}

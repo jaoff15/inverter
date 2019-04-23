@@ -8,7 +8,7 @@ int main()
 {
     init_platform();
 
-
+    initRtc();
     rtc();
     print("Run\n\r");
 

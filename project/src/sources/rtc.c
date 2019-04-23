@@ -2,6 +2,18 @@
 /* Includes */
 #include "../headers/rtc.h"
 
+Controller cQ;
+Controller cD;
+
+void initRtc(){
+	double kpQ = 1;
+	double kiQ = 1;
+	initController(&cQ, kpQ, kiQ);
+
+	double kpD = 1;
+	double kiD = 1;
+	initController(&cD, kpD, kiD);
+}
 
 /* Run-To-Completion OS */
 void rtc(){
@@ -24,7 +36,7 @@ void rtc(){
 
 
 		/* Limit run time */
-		if(runs >= 10){
+		if(runs >= 1){
 			break;
 		}
 
@@ -80,55 +92,7 @@ static void interruptScheduler(){
 	interruptRun--;
 
 	/* All tasks */
-	/* Initialize controller */
-	Controller cQ;
-	double kpQ = 1;
-	double kiQ = 1;
-	initController(&cQ, kpQ, kiQ);
 
-	Controller cD;
-	double kpD = 1;
-	double kiD = 1;
-	initController(&cD, kpD, kiD);
-
-	/* Measurements */
-	double angle;
-	readMemory(ROTOR_ANGLE, &angle);					// Read angle from memory
-
-  double iA;
-//		double iA = -0.809207777821378;	 			// For test
-	readMemory(CURRENT_MEASUREMENT_A, &iA);		// Read phase current 1 from memory
-
-	double iB;
-//		double iB = -0.104205583519848; 			// For test
-	readMemory(CURRENT_MEASUREMENT_B, &iB);		// Read phase current 2 from memory
-
-	 // Calculate third phase
-	double iC = getPhase3(iA,iB);				// Calculate phase current 3
-
-	/* Clarke Park */
-	double iD, iQ;
-	clarkePark(&iD, &iQ, iA, iB, iC, deg2rad(angle));
-
-	/* Control */
-	double outQ, outD;
-	outQ = getOutput(&cQ, iQ);
-	outD = getOutput(&cD, iD);
-
-	/* Inverse Park Clarke */
-	double va, vb, vc;
-	invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
-
-	/* Get duty cycles */
-	double thA, thB, thC;
-	getDutyCycles((double)va, (double)vb, (double)vc, &thA, &thB, &thC);
-
-
-	/* Writing to memory */
-
-	writeMemory(PHASE_THRESHOLD_A, thA);
-	writeMemory(PHASE_THRESHOLD_B, thB);
-	writeMemory(PHASE_THRESHOLD_C, thC);
 }
 
 
@@ -136,17 +100,69 @@ static void interruptScheduler(){
 
 /* Cyclic tasks */
 static void taskClass1(){
-	printf("Cyclic Task 1\n");
+//	printf("Cyclic Task 1\n");
+	/* Initialize controller */
 
+
+		/* Measurements */
+		double angle = 90;
+//		readMemory(ROTOR_ANGLE, &angle);					// Read angle from memory
+
+		double iA;
+		readMemory(CURRENT_MEASUREMENT_A, &iA);		// Read phase current 1 from memory
+		iA = -0.809207777821378;	 			// For test
+
+		double iB;
+		readMemory(CURRENT_MEASUREMENT_B, &iB);		// Read phase current 2 from memory
+		iB = -0.104205583519848; 			// For test
+
+		 // Calculate third phase
+		double iC = getPhase3(iA,iB);				// Calculate phase current 3
+
+
+
+		/* Clarke Park */
+		double iD, iQ;
+		clarkePark(&iD, &iQ, iA, iB, iC, deg2rad(angle));
+
+		/* Control */
+		printf("iD: %f\n",iD);
+		printController(&cD);
+		double outD = getOutput(&cD, iD);
+		printf("D: %f\n",outD);
+
+
+		printf("iQ: %f\n",iQ);
+		printController(&cQ);
+		double outQ = getOutput(&cQ, iQ);
+		printf("Q: %f\n",outQ);
+
+		/* Inverse Park Clarke */
+		double va, vb, vc;
+		invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
+
+		/* Get duty cycles */
+	//	double thA, thB, thC;
+	//	getDutyCycles((double)va, (double)vb, (double)vc, &thA, &thB, &thC);
+
+
+//		printf("A: %f\n",va);
+//		printf("B: %f\n",vb);
+//		printf("C: %f\n",vc);
+
+		/* Writing to memory */
+	//	writeMemory(PHASE_THRESHOLD_A, thA);
+	//	writeMemory(PHASE_THRESHOLD_B, thB);
+	//	writeMemory(PHASE_THRESHOLD_C, thC);
 }
 
 static void taskClass2(){
-	printf("Cyclic Task 2\n");
+//	printf("Cyclic Task 2\n");
 
 }
 
 static void taskClass3(){
-	printf("Cyclic Task 3\n");
+//	printf("Cyclic Task 3\n");
 
 }
 

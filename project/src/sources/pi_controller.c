@@ -22,6 +22,8 @@ double getOutput(Controller *c, double input){
 	// Calculate new output
 	double output =  outputOld + (kp * input) + (ki * inputOld);
 	
+	printf("output: %f\n",output);
+
 	// Anti integrator windup. Limit the output to within set limits
 	if(output > MAX_OUTPUT){		// Check upper limit
 		output = MAX_OUTPUT;		// Limit output
@@ -42,9 +44,9 @@ double getOutput(Controller *c, double input){
 /* Function to print the specified controllers internal values */
 void printController(Controller *c){
 	const double inputOld 	= getLastInput(c);
-	const double outputOld = getLastOutput(c);
-	const double kp 	= getKp(c);
-	const double ki 	= getKi(c);
+	const double outputOld 	= getLastOutput(c);
+	const double kp 		= getKp(c);
+	const double ki 		= getKi(c);
 	printf("kp: %f\n",kp);
 	printf("ki: %f\n",ki);
 	printf("input_old: %f\n",inputOld);

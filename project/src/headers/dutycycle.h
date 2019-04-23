@@ -2,8 +2,7 @@
 #ifndef HEADERS_DUTYCYCLE_H
 #define HEADERS_DUTYCYCLE_H
 
-#define RAD_TO_DEG		0.0174532925
-#define DEG_TO_RAD		57.2957795
+
 
 #define PWM_COUNTER_MAX 	100
 #define PWM_COUNTER_FREQUENCY 	50  //[ns]
@@ -36,9 +35,6 @@ static double getPwmFrequency();
 /* Get the PWM counter time */
 static double getPwmCounterTime();
 
-
-double rad2deg(double angle);
-double deg2rad(double angle);
 
 
 #endif
