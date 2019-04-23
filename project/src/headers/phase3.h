@@ -1,7 +1,7 @@
 
 
-#ifndef PHASE3_H
-#define PHASE3_H
+#ifndef HEADERS_PHASE3_H
+#define HEADERS_PHASE3_H
 
 /* Includes */
 #include <stdio.h>

@@ -1,6 +1,6 @@
 
-#ifndef PI_H
-#define PI_H
+#ifndef HEADERS_PI_CONTROLLER_H
+#define HEADERS_PI_CONTROLLER_H
 
 /* Includes */
 #include <stdio.h>
@@ -35,10 +35,10 @@ double getLastOutput(Controller *c);
 double getLastInput(Controller *c);
 
 // Functions to write values to the specified controller
-double setKp(Controller *c, double _kp);
-double setKi(Controller *c, double _ki);
-double setLastOutput(Controller *c, double _outputOld);
-double setLastInput(Controller *c, double _inputOld);
+static double setKp(Controller *c, double _kp);
+static double setKi(Controller *c, double _ki);
+static double setLastOutput(Controller *c, double _outputOld);
+static double setLastInput(Controller *c, double _inputOld);
 
 
 #endif

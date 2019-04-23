@@ -1,6 +1,6 @@
 
 /* Includes */
-#include "../headers/pi.h"
+#include "../headers/pi_controller.h"
 
 
 /* Function to initialize a controller with a set of start values */
@@ -16,8 +16,8 @@ double getOutput(Controller *c, double input){
 	// Collect controller data
 	const double inputOld 	= getLastInput(c);
 	const double outputOld  = getLastOutput(c);
-	const double kp 	= getKp(c);
-	const double ki 	= getKi(c);
+	const double kp 		= getKp(c);
+	const double ki 		= getKi(c);
 	
 	// Calculate new output
 	double output =  outputOld + (kp * input) + (ki * inputOld);
@@ -68,15 +68,15 @@ double getLastInput(Controller *c){
 }
 
 /* Functions to read out values of the specified controller */
-double setKp(Controller *c, double _kp){
+static double setKp(Controller *c, double _kp){
 	c->kp = _kp;
 }
-double setKi(Controller *c, double _ki){
+static double setKi(Controller *c, double _ki){
 	c->ki = _ki;
 }
-double setLastOutput(Controller *c, double _outputOld){
+static double setLastOutput(Controller *c, double _outputOld){
 	c->outputOld = _outputOld;
 }
-double setLastInput(Controller *c, double _inputOld){
+static double setLastInput(Controller *c, double _inputOld){
 	c->inputOld = _inputOld;
 }
