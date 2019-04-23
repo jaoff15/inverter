@@ -2,11 +2,7 @@
 
 /* Variables declarations */
 
-long unsigned int counter = 0;
-int runs = 0;
 
-char cyclicRun;
-char interruptRun;
 
 void rtc(){
 	while(1){
@@ -36,10 +32,12 @@ void rtc(){
 	}
 }
 
+/* Interrupt Service Routine */
 static void isr(){
 	interruptRun = TRUE;
 }
 
+/* RTC scheduler */
 static void scheduler(){
 	if(cyclicRun){
 		cyclicScheduler();
@@ -52,6 +50,7 @@ static void scheduler(){
 
 }
 
+/* Task scheduler for cyclic tasks */
 static void cyclicScheduler(){
 	/* Cycle class 1 */
 	if(!(runs % CYCLE_TIME_1)){
@@ -70,6 +69,7 @@ static void cyclicScheduler(){
 	cyclicRun 	 = FALSE;
 }
 
+/* Task scheduler for interrupt tasks */
 static void interruptScheduler(){
 	/* All taskscold */
 	taskInterrupt1();
@@ -81,6 +81,10 @@ static void interruptScheduler(){
 	interruptRun = FALSE;
 }
 
+
+
+
+/* Cyclic tasks */
 static void taskClass1(){
 	printf("Cyclic Task 1\n");
 
@@ -97,6 +101,7 @@ static void taskClass3(){
 }
 
 
+/* Interrupt tasks */
 static void taskInterrupt1(){
 	printf("Interrupt Task 1\n");
 }

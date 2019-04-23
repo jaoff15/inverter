@@ -1,5 +1,5 @@
 
-
+/* Includes */
 #include "../headers/dutycycle.h"
 
 /* Function to find the duty cycle for all phases */

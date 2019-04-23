@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include "xil_printf.h"
-#include "headers/platform.h"
+#include "platform.h"
 #include "headers/dutycycle.h"
 #include "headers/math.h"
 #include "headers/clarkepark.h"

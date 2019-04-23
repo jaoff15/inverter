@@ -1,16 +1,16 @@
 
-
+/* Includes */
 #include <stdio.h>
 #include "types.h"
 
-
+/* Defines */
 #define BASE_ADDRESS 0x40000000
 
 
 enum RAM{
-	ADR_TORQUE_PRESSURE,	// Offset   0 from base address
-	ADR_MOTOR_SPEED,	// Offset   8 from base address
-	ADR_MOTOR_POSITION	// Offset  16 from base address
+	CURRENT_MEASUREMENT_A,	// Offset   0 from base address
+	CURRENT_MEASUREMENT_B,	// Offset   8 from base address
+	ROTOR_ANGLE
 }RAM;
 
 

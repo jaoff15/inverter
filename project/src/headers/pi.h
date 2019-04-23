@@ -2,6 +2,10 @@
 #ifndef PI_H
 #define PI_H
 
+/* Includes */
+#include <stdio.h>
+
+/* Defines */
 // Output upper and lower limits
 #define MAX_OUTPUT 10
 #define MIN_OUTPUT 0

@@ -1,8 +1,9 @@
 
+/* Includes */
 #include "../headers/pi.h"
-#include <stdio.h>
 
-// Function to initialize a controller with a set of start values
+
+/* Function to initialize a controller with a set of start values */
 void initController(Controller *c, double _kp, double _ki){
 	setKp(c, _kp);
 	setKi(c, _ki);
@@ -10,7 +11,7 @@ void initController(Controller *c, double _kp, double _ki){
 	setLastOutput(c, 0.0);
 }
 
-// Function to get the next output of a controller with a new input
+/* Function to get the next output of a controller with a new input */
 double getOutput(Controller *c, double input){
 	// Collect controller data
 	const double inputOld 	= getLastInput(c);
@@ -38,7 +39,7 @@ double getOutput(Controller *c, double input){
 	return output;
 }	
 
-// Function to print the specified controllers internal values
+/* Function to print the specified controllers internal values */
 void printController(Controller *c){
 	const double inputOld 	= getLastInput(c);
 	const double outputOld = getLastOutput(c);
@@ -52,7 +53,7 @@ void printController(Controller *c){
 
 
 
-// Functions to read out values of the specified controller
+/* Functions to read out values of the specified controller */
 double getKp(Controller *c){
 	return c->kp;
 }
@@ -66,7 +67,7 @@ double getLastInput(Controller *c){
 	return c->inputOld;
 }
 
-// Functions to read out values of the specified controller
+/* Functions to read out values of the specified controller */
 double setKp(Controller *c, double _kp){
 	c->kp = _kp;
 }
