@@ -1,0 +1,6 @@
+09:47:23 INFO  : Registering command handlers for SDK TCF services
+09:47:24 INFO  : Launching XSCT server: xsct -n -interactive /home/jacoboffersen/Repos/inverter/inverter.sdk/temp_xsdb_launch_script.tcl
+09:47:26 INFO  : XSCT server has started successfully.
+09:47:26 INFO  : Successfully done setting XSCT server connection channel  
+09:47:26 INFO  : Successfully done setting SDK workspace  
+09:47:26 INFO  : Processing command line option -hwspec /home/jacoboffersen/Repos/inverter/inverter.sdk/top.hdf.
