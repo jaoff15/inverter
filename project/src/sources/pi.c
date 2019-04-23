@@ -1,5 +1,5 @@
 
-#include "pi.h"
+#include "../headers/pi.h"
 #include <stdio.h>
 
 // Function to initialize a controller with a set of start values

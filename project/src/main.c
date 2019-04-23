@@ -8,6 +8,7 @@
 #include "headers/phase3.h"
 #include "headers/ramInterface.h"
 #include "headers/types.h"
+#include "headers/pi.h"
 
 int main()
 {
@@ -24,41 +25,52 @@ int main()
 
 
 
+/* Initialize controller */
+//Controller cQ;
+//Controller cD;
+// double kpQ = 1.1;
+// double kiQ = 1.2;
+// double kpD = 1.1;
+// double kiD = 1.2;
+//initController(&cQ, kpQ, kiQ);
+//initController(&cD, kpD, kiD);
 
-//void main(){
-//
-//	// Measurements
-//	double angle = 0;
-//	double iA = -0.809207777821378;
-//	double iB = -0.104205583519848;
-//	double iC = getPhase3(phase1, phase2);
-//
-//
+
+/* Measurements */
+//	double angle;
+//	readMemory(ANGLE, angle);					// Read angle from memory
+
+//  double iA;
+//	double iA = -0.809207777821378;	 			// For test
+//	readMemory(CURRENT_MEASUREMENT_A, iA);		// Read phase current 1 from memory
+
+//  double iB;
+//	double iB = -0.104205583519848; 			// For test
+//	readMemory(CURRENT_MEASUREMENT_B, iB);		// Read phase current 2 from memory
+
+// // Calculate third phase
+//	double iC = getPhase3(iA,iB);				// Calculate phase current 3
+
+/* Clarke Park */
 //	double iD, iQ;
 //	clarkePark(&iD, &iQ, iA, iB, iC, deg2rad(angle));
-//
-//	double va = 0;
-//	double vb = 0;
-//	double vc = 0;
-//	invClarkePark(&va, &vb, &vc, iD, iQ, deg2rad(angle));
-//
-//	double dcA, dcB, dcC;
-//	getDutyCycles((double)va, (double)vb, (double)vc, &dcA, &dcB, &dcC);
-//
-//
-//	printf("dcA: %f\n",dcA);
-//	printf("dcB: %f\n",dcB);
-//	printf("dcC: %f\n",dcC);
-//
-//
-//}
+
+/* Control */
+//	double outQ, outD;
+//	outQ = getOutput(&cQ, iQ);
+//	outD = getOutput(&cD, iD);
+
+/* Inverse Park Clarke */
+//	double va, vb, vc;
+//	invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
+
+/* Get duty cycles */
+//	double thA, thB, thC;
+//	getDutyCycles((double)va, (double)vb, (double)vc, &thA, &thB, &thC);
 
 
-//void main(){
-//
-//	// Reading from memory
-//	readMemory(ADR_TORQUE_PRESSURE, 0x00000000);
-//
 //	// Writing to memory
-//	writeMemory(ADR_MOTOR_SPEED, 0x00000000);
-//}
+//	writeMemory(PHASE_THRESHOLD_A, thA);
+//	writeMemory(PHASE_THRESHOLD_B, thB);
+//	writeMemory(PHASE_THRESHOLD_C, thC);
+
