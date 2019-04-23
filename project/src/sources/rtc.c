@@ -1,6 +1,6 @@
-#include "../headers/os.h"
 
-/* Variables declarations */
+/* Includes */
+#include "../headers/rtc.h"
 
 
 
