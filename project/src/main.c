@@ -6,6 +6,8 @@
 #include "headers/math.h"
 #include "headers/clarkepark.h"
 #include "headers/phase3.h"
+#include "headers/ramInterface.h"
+#include "headers/types.h"
 
 int main()
 {
@@ -49,4 +51,14 @@ int main()
 //	printf("dcC: %f\n",dcC);
 //
 //
+//}
+
+
+//void main(){
+//
+//	// Reading from memory
+//	readMemory(ADR_TORQUE_PRESSURE, 0x00000000);
+//
+//	// Writing to memory
+//	writeMemory(ADR_MOTOR_SPEED, 0x00000000);
 //}
