@@ -34,7 +34,6 @@ void rtc(){
 		/* Run scheduler */
 		scheduler();
 
-
 		/* Limit run time */
 		if(runs >= 1){
 			break;
@@ -103,11 +102,10 @@ static void taskClass1(){
 //	printf("Cyclic Task 1\n");
 	/* Initialize controller */
 
-
 		/* Measurements */
 		double angle;
 		readMemory(ROTOR_ANGLE, &angle);			// Read angle from memory
-		angle = 90;									// Temporary
+		angle = 0;									// Temporary
 
 		double iA;
 		readMemory(CURRENT_MEASUREMENT_A, &iA);		// Read phase current 1 from memory
@@ -126,36 +124,27 @@ static void taskClass1(){
 		double iD, iQ;
 		clarkePark(&iD, &iQ, iA, iB, iC, deg2rad(angle));
 
+
+
 		/* Control */
-		printf("iD: %f\n",iD);
-		printController(&cD);
 		double outD = getOutput(&cD, iD);
-		printf("D: %f\n",outD);
-
-		printf("\n");
-
-		printf("iQ: %f\n",iQ);
-		printController(&cQ);
 		double outQ = getOutput(&cQ, iQ);
-		printf("Q: %f\n",outQ);
+
 
 		/* Inverse Park Clarke */
-		double va, vb, vc;
-		invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
-
-		/* Get duty cycles */
-	//	double thA, thB, thC;
-	//	getDutyCycles((double)va, (double)vb, (double)vc, &thA, &thB, &thC);
+		double vA, vB, vC;
+		invClarkePark(&vA, &vB, &vC, outD, outQ, deg2rad(angle));
 
 
-//		printf("A: %f\n",va);
-//		printf("B: %f\n",vb);
-//		printf("C: %f\n",vc);
+		printf("A: %f\n",vA);
+		printf("B: %f\n",vB);
+		printf("C: %f\n",vC);
 
 		/* Writing to memory */
-	//	writeMemory(PHASE_THRESHOLD_A, thA);
-	//	writeMemory(PHASE_THRESHOLD_B, thB);
-	//	writeMemory(PHASE_THRESHOLD_C, thC);
+		writeMemory(PHASE_THRESHOLD_A, vA);
+		writeMemory(PHASE_THRESHOLD_B, vB);
+		writeMemory(PHASE_THRESHOLD_C, vC);
+
 }
 
 static void taskClass2(){
