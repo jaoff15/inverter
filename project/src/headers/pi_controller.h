@@ -8,7 +8,7 @@
 /* Defines */
 // Output upper and lower limits
 #define MAX_OUTPUT 10
-#define MIN_OUTPUT 0
+#define MIN_OUTPUT -MAX_OUTPUT
 
 // Struct to contain the data of a PI controller
 typedef struct Controller{

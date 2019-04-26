@@ -21,8 +21,6 @@ double getOutput(Controller *c, double input){
 	
 	// Calculate new output
 	double output =  outputOld + (kp * input) + (ki * inputOld);
-	
-	printf("output: %f\n",output);
 
 	// Anti integrator windup. Limit the output to within set limits
 	if(output > MAX_OUTPUT){		// Check upper limit
@@ -82,3 +80,4 @@ static double setLastOutput(Controller *c, double _outputOld){
 static double setLastInput(Controller *c, double _inputOld){
 	c->inputOld = _inputOld;
 }
+

@@ -12,6 +12,12 @@ int main()
     rtc();
     print("Run\n\r");
 
+
+//    /* Get value from terminal */
+//    int c = getchar( );
+//    /* Write value to terminal */
+//	putchar( c );
+
     cleanup_platform();
     return 0;
 }

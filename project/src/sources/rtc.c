@@ -105,16 +105,17 @@ static void taskClass1(){
 
 
 		/* Measurements */
-		double angle = 90;
-//		readMemory(ROTOR_ANGLE, &angle);					// Read angle from memory
+		double angle;
+		readMemory(ROTOR_ANGLE, &angle);			// Read angle from memory
+		angle = 90;									// Temporary
 
 		double iA;
 		readMemory(CURRENT_MEASUREMENT_A, &iA);		// Read phase current 1 from memory
-		iA = -0.809207777821378;	 			// For test
+		iA = -0.809207777821378;	 				// Temporary
 
 		double iB;
 		readMemory(CURRENT_MEASUREMENT_B, &iB);		// Read phase current 2 from memory
-		iB = -0.104205583519848; 			// For test
+		iB = -0.104205583519848; 					// Temporary
 
 		 // Calculate third phase
 		double iC = getPhase3(iA,iB);				// Calculate phase current 3
@@ -131,6 +132,7 @@ static void taskClass1(){
 		double outD = getOutput(&cD, iD);
 		printf("D: %f\n",outD);
 
+		printf("\n");
 
 		printf("iQ: %f\n",iQ);
 		printController(&cQ);
