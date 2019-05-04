@@ -10,12 +10,12 @@
 
 
 enum RAM{
-	CURRENT_MEASUREMENT_A,	// Offset   0 from base address
-	CURRENT_MEASUREMENT_B,	// Offset   8 from base address
-	ROTOR_ANGLE,
-	PHASE_THRESHOLD_A,
-	PHASE_THRESHOLD_B,
-	PHASE_THRESHOLD_C
+	CURRENT_MEASUREMENT_A,	// Offset 0*8= 0 from base address
+	CURRENT_MEASUREMENT_B,	// Offset 1*8= 8 from base address
+	ROTOR_ANGLE,			// Offset 2*8=16 from base address
+	PHASE_THRESHOLD_A,		// Offset 3*8=24 from base address
+	PHASE_THRESHOLD_B,	    // Offset 4*8=32 from base address
+	PHASE_THRESHOLD_C		// Offset 5*8=40 from base address
 }RAM;
 
 

@@ -1,3 +1,11 @@
+*/.metadata/*
+*.metadata/*
+*RemoteSystemsTempFiles/*
+*/RemoteSystemsTempFiles/*
+*/SDK.log
+*SDK.log
+
+
 # Prerequisites
 *.d
 
