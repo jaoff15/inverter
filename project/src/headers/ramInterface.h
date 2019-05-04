@@ -8,6 +8,7 @@
 /* Defines */
 #define BASE_ADDRESS 0x40000000
 
+#define CHUNK_SIZE 4
 
 enum RAM{
 	CURRENT_MEASUREMENT_A,	// Offset 0*8= 0 from base address
