@@ -13,7 +13,7 @@
 #define TWO_OVER_SQRT_THREE 		1.154700538379252	// 2/sqrt(3)
 #define SQRT_THREE_OVER_TWO 		0.866025403784439	// sqrt(3)/2
 #define HALF 						0.5					// 1/2
-#define SQRT_THREE_OVER_THREE		0.577350269189626	// sqrt(3)/3
+#define ONE_OVER_SQRT_THREE		0.577350269189626	// 1/sqrt(3)
 
 
 
