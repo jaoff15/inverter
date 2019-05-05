@@ -51,7 +51,7 @@ void clarke(double *iAlpha, double *iBeta, double iA, double iB, double iC){
 	// *iBeta  = TWO_OVER_SQRT_THREE * (iB - iC);
 	// Power Variant Version
 	*iAlpha = TWO_THIRDS * iA - ONE_THIRD * iB - ONE_THIRD * iC;
-	*iBeta  = SQRT_THREE_OVER_THREE * iB - SQRT_THREE_OVER_THREE * iC;
+	*iBeta  = ONE_OVER_SQRT_THREE * iB - ONE_OVER_SQRT_THREE * iC;
 }
 
 /* The inverse Clarke function */
