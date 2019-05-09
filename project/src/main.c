@@ -8,8 +8,11 @@ int main()
 {
     init_platform();
 
-    initRtc();
-    rtc();
+
+    cyclicTask();
+
+//    initRtc();
+//    rtc();
     print("Run\n\r");
 
 
