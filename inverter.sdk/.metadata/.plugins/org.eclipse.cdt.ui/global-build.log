@@ -1,0 +1,1412 @@
+08:59:26 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+08:59:33 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+09:00:39 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+09:01:07 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78616	   2580	  23424	 104620	  198ac	project.elf
+Finished building: project.elf.size
+ 
+09:01:08 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+10:34:22 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/pi_controller.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/pi_controller.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/pi_controller.d" -MT"src/sources/pi_controller.o" -o "src/sources/pi_controller.o" "../src/sources/pi_controller.c"
+../src/sources/pi_controller.c: In function 'getOutput':
+../src/sources/pi_controller.c:25:9: warning: unused variable 't3' [-Wunused-variable]
+  double t3 = (ki * inputOld);
+         ^~
+../src/sources/pi_controller.c:24:9: warning: unused variable 't2' [-Wunused-variable]
+  double t2 = (kp * input);
+         ^~
+../src/sources/pi_controller.c:23:9: warning: unused variable 't1' [-Wunused-variable]
+  double t1 = outputOld;
+         ^~
+../src/sources/pi_controller.c: In function 'setKp':
+../src/sources/pi_controller.c:78:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setKi':
+../src/sources/pi_controller.c:81:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastOutput':
+../src/sources/pi_controller.c:84:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastInput':
+../src/sources/pi_controller.c:87:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/sources/pi_controller.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78616	   2580	  23424	 104620	  198ac	project.elf
+Finished building: project.elf.size
+ 
+10:34:50 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/pi_controller.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/pi_controller.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/pi_controller.d" -MT"src/sources/pi_controller.o" -o "src/sources/pi_controller.o" "../src/sources/pi_controller.c"
+../src/sources/pi_controller.c: In function 'setKp':
+../src/sources/pi_controller.c:80:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setKi':
+../src/sources/pi_controller.c:83:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastOutput':
+../src/sources/pi_controller.c:86:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastInput':
+../src/sources/pi_controller.c:89:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/sources/pi_controller.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78704	   2580	  23424	 104708	  19904	project.elf
+Finished building: project.elf.size
+ 
+10:34:52 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:03:29 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/pi_controller.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/pi_controller.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/pi_controller.d" -MT"src/sources/pi_controller.o" -o "src/sources/pi_controller.o" "../src/sources/pi_controller.c"
+../src/sources/pi_controller.c: In function 'setKp':
+../src/sources/pi_controller.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setKi':
+../src/sources/pi_controller.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastOutput':
+../src/sources/pi_controller.c:79:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastInput':
+../src/sources/pi_controller.c:82:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/sources/pi_controller.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78600	   2580	  23424	 104604	  1989c	project.elf
+Finished building: project.elf.size
+ 
+11:04:45 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:16:6: error: 'c' undeclared (first use in this function)
+      c = getchar( );
+      ^
+../src/main.c:16:6: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/main.c: At top level:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:04:53 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:16:6: error: 'cint' undeclared (first use in this function); did you mean 'uint'?
+      cint  = getchar( );
+      ^~~~
+      uint
+../src/main.c:16:6: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/main.c:2:0:
+../src/main.c:17:15: error: 'c' undeclared (first use in this function)
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+      putchar( c );
+               ^
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/main.c: At top level:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:04:57 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  79496	   2580	  23424	 105500	  19c1c	project.elf
+Finished building: project.elf.size
+ 
+11:04:59 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:05:52 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78600	   2580	  23424	 104604	  1989c	project.elf
+Finished building: project.elf.size
+ 
+11:10:04 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/pi_controller.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/pi_controller.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/pi_controller.d" -MT"src/sources/pi_controller.o" -o "src/sources/pi_controller.o" "../src/sources/pi_controller.c"
+../src/sources/pi_controller.c: In function 'setKp':
+../src/sources/pi_controller.c:73:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setKi':
+../src/sources/pi_controller.c:76:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastOutput':
+../src/sources/pi_controller.c:79:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/sources/pi_controller.c: In function 'setLastInput':
+../src/sources/pi_controller.c:82:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/sources/pi_controller.c
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78600	   2580	  23424	 104604	  1989c	project.elf
+Finished building: project.elf.size
+ 
+11:10:06 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:12:01 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78120	   2580	  23424	 104124	  196bc	project.elf
+Finished building: project.elf.size
+ 
+11:12:33 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78208	   2580	  23424	 104212	  19714	project.elf
+Finished building: project.elf.size
+ 
+11:12:35 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:18:58 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:106:7: error: unknown type name 'u8'
+   for(u8 a = 0; a < 360; a++){
+       ^~
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+src/sources/subdir.mk:36: recipe for target 'src/sources/rtc.o' failed
+make: *** [src/sources/rtc.o] Error 1
+11:19:14 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:106:24: error: expected '=', ',', ';', 'asm' or '__attribute__' before numeric constant
+   for(unsigned integer 8 a = 0; a < 360; a++){
+                        ^
+../src/sources/rtc.c:106:33: error: 'a' undeclared (first use in this function)
+   for(unsigned integer 8 a = 0; a < 360; a++){
+                                 ^
+../src/sources/rtc.c:106:33: note: each undeclared identifier is reported only once for each function it appears in
+../src/sources/rtc.c:106:40: error: expected ')' before ';' token
+   for(unsigned integer 8 a = 0; a < 360; a++){
+                                        ^
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+src/sources/subdir.mk:36: recipe for target 'src/sources/rtc.o' failed
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+make: *** [src/sources/rtc.o] Error 1
+11:19:21 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:106:20: error: expected identifier or '(' before numeric constant
+   for(unsigned int 8 a = 0; a < 360; a++){
+                    ^
+../src/sources/rtc.c:106:29: error: 'a' undeclared (first use in this function)
+   for(unsigned int 8 a = 0; a < 360; a++){
+                             ^
+../src/sources/rtc.c:106:29: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+src/sources/subdir.mk:36: recipe for target 'src/sources/rtc.o' failed
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+make: *** [src/sources/rtc.o] Error 1
+11:19:28 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78272	   2580	  23424	 104276	  19754	project.elf
+Finished building: project.elf.size
+ 
+11:20:15 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:106:37: warning: statement with no effect [-Wunused-value]
+   for(unsigned int a = 0; a < 360; a+90){
+                                    ~^~~
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78272	   2580	  23424	 104276	  19754	project.elf
+Finished building: project.elf.size
+ 
+11:20:27 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78272	   2580	  23424	 104276	  19754	project.elf
+Finished building: project.elf.size
+ 
+11:20:40 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:21:19 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78208	   2580	  23424	 104212	  19714	project.elf
+Finished building: project.elf.size
+ 
+11:21:20 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:24:33 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78208	   2580	  23424	 104212	  19714	project.elf
+Finished building: project.elf.size
+ 
+11:25:17 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:145:34: error: 'thA' undeclared (first use in this function)
+   writeMemory(PHASE_THRESHOLD_A, thA);
+                                  ^~~
+../src/sources/rtc.c:145:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/sources/rtc.c:146:34: error: 'thB' undeclared (first use in this function); did you mean 'thA'?
+   writeMemory(PHASE_THRESHOLD_B, thB);
+                                  ^~~
+                                  thA
+../src/sources/rtc.c:147:34: error: 'thC' undeclared (first use in this function); did you mean 'thB'?
+   writeMemory(PHASE_THRESHOLD_C, thC);
+                                  ^~~
+                                  thB
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+src/sources/subdir.mk:36: recipe for target 'src/sources/rtc.o' failed
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+make: *** [src/sources/rtc.o] Error 1
+11:25:29 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78272	   2580	  23424	 104276	  19754	project.elf
+Finished building: project.elf.size
+ 
+11:25:54 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:133:18: error: 'va' undeclared (first use in this function); did you mean 'vC'?
+   invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
+                  ^~
+                  vC
+../src/sources/rtc.c:133:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/sources/rtc.c:133:23: error: 'vb' undeclared (first use in this function); did you mean 'va'?
+   invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
+                       ^~
+                       va
+../src/sources/rtc.c:133:28: error: 'vc' undeclared (first use in this function); did you mean 'vb'?
+   invClarkePark(&va, &vb, &vc, outD, outQ, deg2rad(angle));
+                            ^~
+                            vb
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+src/sources/subdir.mk:36: recipe for target 'src/sources/rtc.o' failed
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+make: *** [src/sources/rtc.o] Error 1
+11:26:01 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  78272	   2580	  23424	 104276	  19754	project.elf
+Finished building: project.elf.size
+ 
+11:26:04 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:28:27 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/dutycycle.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/dutycycle.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/dutycycle.d" -MT"src/sources/dutycycle.o" -o "src/sources/dutycycle.o" "../src/sources/dutycycle.c"
+Finished building: ../src/sources/dutycycle.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76864	   2580	  23424	 102868	  191d4	project.elf
+Finished building: project.elf.size
+ 
+11:28:32 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:28:50 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76864	   2580	  23424	 102868	  191d4	project.elf
+Finished building: project.elf.size
+ 
+14:56:53 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/ramInterface.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/ramInterface.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/ramInterface.d" -MT"src/sources/ramInterface.o" -o "src/sources/ramInterface.o" "../src/sources/ramInterface.c"
+../src/sources/ramInterface.c: In function 'readMemory':
+../src/sources/ramInterface.c:9:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (8 * _addr);
+           ^~~~
+../src/sources/ramInterface.c: In function 'writeMemory':
+../src/sources/ramInterface.c:18:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (8 * _addr);
+           ^~~~
+Finished building: ../src/sources/ramInterface.c
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76864	   2580	  23424	 102868	  191d4	project.elf
+Finished building: project.elf.size
+ 
+15:14:51 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/ramInterface.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/ramInterface.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/ramInterface.d" -MT"src/sources/ramInterface.o" -o "src/sources/ramInterface.o" "../src/sources/ramInterface.c"
+../src/sources/ramInterface.c: In function 'readMemory':
+../src/sources/ramInterface.c:9:34: error: 'CHUNK_SIZE' undeclared (first use in this function); did you mean '_T_SIZE'?
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+                                  ^~~~~~~~~~
+                                  _T_SIZE
+../src/sources/ramInterface.c:9:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/sources/ramInterface.c:9:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+           ^~~~
+../src/sources/ramInterface.c: In function 'writeMemory':
+../src/sources/ramInterface.c:18:34: error: 'CHUNK_SIZE' undeclared (first use in this function); did you mean '_T_SIZE'?
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+                                  ^~~~~~~~~~
+                                  _T_SIZE
+../src/sources/ramInterface.c:18:11: warning: unused variable 'addr' [-Wunused-variable]
+src/sources/subdir.mk:36: recipe for target 'src/sources/ramInterface.o' failed
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+           ^~~~
+make: *** [src/sources/ramInterface.o] Error 1
+15:14:51 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/ramInterface.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/ramInterface.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/ramInterface.d" -MT"src/sources/ramInterface.o" -o "src/sources/ramInterface.o" "../src/sources/ramInterface.c"
+../src/sources/ramInterface.c: In function 'readMemory':
+../src/sources/ramInterface.c:9:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+           ^~~~
+../src/sources/ramInterface.c: In function 'writeMemory':
+../src/sources/ramInterface.c:18:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+           ^~~~
+Finished building: ../src/sources/ramInterface.c
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building file: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF".metadata/.plugins/org.eclipse.cdt.make.core/specs.d" -MT".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" -o ".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c"
+Finished building: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76864	   2580	  23424	 102868	  191d4	project.elf
+Finished building: project.elf.size
+ 
+15:15:06 **** Incremental Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:15:12 **** Auto Build of configuration Debug for project project ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/sources/ramInterface.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/ramInterface.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/ramInterface.d" -MT"src/sources/ramInterface.o" -o "src/sources/ramInterface.o" "../src/sources/ramInterface.c"
+../src/sources/ramInterface.c: In function 'readMemory':
+../src/sources/ramInterface.c:9:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+           ^~~~
+../src/sources/ramInterface.c: In function 'writeMemory':
+../src/sources/ramInterface.c:18:11: warning: unused variable 'addr' [-Wunused-variable]
+  addr_typ addr = BASE_ADDRESS + (CHUNK_SIZE * _addr);
+           ^~~~
+Finished building: ../src/sources/ramInterface.c
+ 
+Building file: ../src/sources/rtc.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+../src/sources/rtc.c: In function 'taskClass1':
+../src/sources/rtc.c:107:27: warning: passing argument 2 of 'readMemory' from incompatible pointer type [-Wincompatible-pointer-types]
+   readMemory(ROTOR_ANGLE, &angle);   // Read angle from memory
+                           ^
+In file included from ../src/sources/../headers/rtc.h:9:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/../headers/ramInterface.h:24:6: note: expected 'data_typ * {aka float *}' but argument is of type 'double *'
+ void readMemory(addr_typ addr, data_typ *data);
+      ^~~~~~~~~~
+../src/sources/rtc.c:111:37: warning: passing argument 2 of 'readMemory' from incompatible pointer type [-Wincompatible-pointer-types]
+   readMemory(CURRENT_MEASUREMENT_A, &iA);  // Read phase current 1 from memory
+                                     ^
+In file included from ../src/sources/../headers/rtc.h:9:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/../headers/ramInterface.h:24:6: note: expected 'data_typ * {aka float *}' but argument is of type 'double *'
+ void readMemory(addr_typ addr, data_typ *data);
+      ^~~~~~~~~~
+../src/sources/rtc.c:115:37: warning: passing argument 2 of 'readMemory' from incompatible pointer type [-Wincompatible-pointer-types]
+   readMemory(CURRENT_MEASUREMENT_B, &iB);  // Read phase current 2 from memory
+                                     ^
+In file included from ../src/sources/../headers/rtc.h:9:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/../headers/ramInterface.h:24:6: note: expected 'data_typ * {aka float *}' but argument is of type 'double *'
+ void readMemory(addr_typ addr, data_typ *data);
+      ^~~~~~~~~~
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+Finished building: ../src/sources/rtc.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/headers/rtc.h:14:0,
+                 from ../src/main.c:5:
+../src/headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/main.c:5:0:
+../src/headers/rtc.h:37:13: warning: 'isrTask' declared 'static' but never defined [-Wunused-function]
+ static void isrTask();
+             ^~~~~~~
+../src/headers/rtc.h:40:13: warning: 'isrCounter' declared 'static' but never defined [-Wunused-function]
+ static void isrCounter();
+             ^~~~~~~~~~
+../src/headers/rtc.h:43:13: warning: 'scheduler' declared 'static' but never defined [-Wunused-function]
+ static void scheduler();
+             ^~~~~~~~~
+../src/headers/rtc.h:46:13: warning: 'cyclicScheduler' declared 'static' but never defined [-Wunused-function]
+ static void cyclicScheduler();
+             ^~~~~~~~~~~~~~~
+../src/headers/rtc.h:49:13: warning: 'interruptScheduler' declared 'static' but never defined [-Wunused-function]
+ static void interruptScheduler();
+             ^~~~~~~~~~~~~~~~~~
+../src/headers/rtc.h:52:13: warning: 'taskClass1' declared 'static' but never defined [-Wunused-function]
+ static void taskClass1();
+             ^~~~~~~~~~
+../src/headers/rtc.h:53:13: warning: 'taskClass2' declared 'static' but never defined [-Wunused-function]
+ static void taskClass2();
+             ^~~~~~~~~~
+../src/headers/rtc.h:54:13: warning: 'taskClass3' declared 'static' but never defined [-Wunused-function]
+ static void taskClass3();
+             ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: project.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf"  ./src/sources/clarkepark.o ./src/sources/dutycycle.o ./src/sources/math.o ./src/sources/phase3.o ./src/sources/pi_controller.o ./src/sources/ramInterface.o ./src/sources/rtc.o  ./src/main.o ./src/platform.o  ./.metadata/.plugins/org.eclipse.cdt.make.core/specs.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: project.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size project.elf  |tee "project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76864	   2580	  23424	 102868	  191d4	project.elf
+Finished building: project.elf.size
+ 
