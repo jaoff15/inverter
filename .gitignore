@@ -52,4 +52,5 @@ Mkfile.old
 dkms.conf
 
 # User defined
+*.metadata*
 inverter.cache/*

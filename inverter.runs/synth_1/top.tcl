@@ -34,6 +34,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
   /home/jacoboffersen/Repos/inverter/src/mem_interface.vhd
+  /home/jacoboffersen/Repos/inverter/src/pwm_dual.vhd
   /home/jacoboffersen/Repos/inverter/src/top.vhd
 }
 add_files /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/design_1.bd

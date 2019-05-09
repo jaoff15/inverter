@@ -16,7 +16,6 @@ use ieee.numeric_std.all;
 entity pwm_dual is
     Port ( clk            : in  std_logic;                              -- Input clock
 		   duty_cycle 	  : in  signed(10 downto 0);                    -- duty_cycle*100. 501 => 0.501 = 50.1%
-           phase          : in  std_logic_vector(1 downto 0) := "00";   -- 0 = 0degrees, 1 = 120 degrees, 2 = 240 degrees
            pwm_high       : out std_logic;                              -- Output PWM high signal
            pwm_low        : out std_logic;                              -- Output PWM low signal
            pwm_high_middle: out std_logic;                              -- Outputs a pulse on the middle of the high-side PWM
@@ -72,23 +71,7 @@ begin
     if rising_edge(clk) then
         -- Initialize the counter with a phase and a counting direction
         if dir = UNINITIALIZED then
-            -- 00 => 0 degrees phase shift. Add 0 degrees
-            if phase = "00" then
-                counter <= "00000000000";
-                dir <= UP;
-            
-            -- 01 => 120 degrees of phase shift. Add 120 degrees
-            elsif phase = "01" then
---                counter <= x"0000029A";  -- COUNT_MAX*3/3 = 67
-                counter <= "00001000011";  -- COUNT_MAX*3/3 = 67
-                dir <= UP;
-            
-            -- 10 => 240 degrees of phase shift. Add 240 degrees of phase shift
-            elsif phase = "10" then
---                counter <= x"0000014D"; -- (COUNT_MAX*2/(2/3))-COUNT_MAX = 33
-                counter <= "00000100001"; -- (COUNT_MAX*2/(2/3))-COUNT_MAX = 33
-                dir <= DOWN;
-            end if;
+            counter <= "00000000000";
         end if;
         
         -- Count up

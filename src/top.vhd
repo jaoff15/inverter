@@ -20,7 +20,6 @@ architecture Behavioral of top is
     Port (  
             clk             : in  std_logic;
             duty_cycle      : in  signed(10 downto 0);
-            phase           : in  std_logic_vector(1 downto 0);
             pwm_high        : out std_logic;
             pwm_low         : out std_logic;
             pwm_high_middle : out std_logic;
@@ -35,6 +34,13 @@ architecture Behavioral of top is
                 duty_cycle   : in  signed(10 downto 0);
                 phase        : in  std_logic_vector (10 downto 0);
                 pwm          : out std_logic
+               );
+    end component;
+    
+    -- Memory interface
+    component mem_interface is
+        Port ( 
+                clk          : in  std_logic
                );
     end component;
     
@@ -82,7 +88,6 @@ pwm_dual0:pwm_dual
 port map(
            clk            => clk,
            duty_cycle     => duty_cycle_signal, 
-           phase          => "00",
            pwm_high       => red(6),
            pwm_low        => red(4),
            pwm_high_middle=> green(6),
@@ -94,7 +99,6 @@ pwm_dual1:pwm_dual
 port map(
            clk            => clk,
            duty_cycle     => duty_cycle_signal,
-           phase          => "01",
            pwm_high       => red(2),
            pwm_low        => red(0),
            pwm_high_middle=> green(2),
@@ -106,13 +110,16 @@ port map(
 --port map(
 --           clk            => clk,
 --           duty_cycle     => "00111110100", -- 50%
---           phase          => "10",
 --           pwm_high       => blue(6),
 --           pwm_low        => green(5),
 --           pwm_high_middle=> green(6),
 --           pwm_low_middle => green(7)
 --);
 
+mem_interface0: mem_interface
+port map(
+    clk => clk
+);
 
 
 end Behavioral;

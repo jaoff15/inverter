@@ -6,12 +6,6 @@ use ieee.std_logic_unsigned.all;
 
 entity mem_interface is
     Port ( clk          : in  std_logic                     := '0'
---           start        : in  std_logic                     := '0';
---           row          : in  integer range 0 to 7;
---           done         : out std_logic                     := '0';
---           red          : out std_logic_vector(63 downto 0) := (others => '0'); 
---           green        : out std_logic_vector(63 downto 0) := (others => '0');
---           blue         : out std_logic_vector(63 downto 0) := (others => '0')
     );
 end mem_interface;
 
