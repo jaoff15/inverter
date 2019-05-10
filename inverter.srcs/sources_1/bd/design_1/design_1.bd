@@ -479,8 +479,8 @@
         <spirit:componentRef spirit:library="ip" spirit:name="xadc_wiz" spirit:vendor="xilinx.com" spirit:version="3.3"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_xadc_wiz_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="XADC_STARUP_SELECTION">channel_sequencer</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="SEQUENCER_MODE">Continuous</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="XADC_STARUP_SELECTION">single_channel</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="SEQUENCER_MODE">Off</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="OT_ALARM">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="USER_TEMP_ALARM">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="VCCINT_ALARM">false</spirit:configurableElementValue>

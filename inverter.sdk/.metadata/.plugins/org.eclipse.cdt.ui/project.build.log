@@ -1,11 +1,81 @@
-21:40:47 **** Auto Build of configuration Debug for project project ****
+13:18:52 **** Auto Build of configuration Debug for project project ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/sources/adc.c
+Building file: ../src/sources/rtc.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/adc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/adc.d" -MT"src/sources/adc.o" -o "src/sources/adc.o" "../src/sources/adc.c"
-Finished building: ../src/sources/adc.c
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sources/rtc.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../project_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sources/rtc.d" -MT"src/sources/rtc.o" -o "src/sources/rtc.o" "../src/sources/rtc.c"
+In file included from ../src/sources/../headers/ramInterface.h:6:0,
+                 from ../src/sources/../headers/rtc.h:9,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/types.h:21:0: warning: "FALSE" redefined
+ #define FALSE 0
+ 
+In file included from ../../project_bsp/ps7_cortexa9_0/include/xil_printf.h:11:0,
+                 from ../src/sources/../headers/types.h:5,
+                 from ../src/sources/../headers/ramInterface.h:6,
+                 from ../src/sources/../headers/rtc.h:9,
+                 from ../src/sources/rtc.c:3:
+../../project_bsp/ps7_cortexa9_0/include/xil_types.h:69:0: note: this is the location of the previous definition
+ #  define FALSE  0U
+ 
+In file included from ../src/sources/../headers/ramInterface.h:6:0,
+                 from ../src/sources/../headers/rtc.h:9,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/types.h:22:0: warning: "TRUE" redefined
+ #define TRUE 1
+ 
+In file included from ../../project_bsp/ps7_cortexa9_0/include/xil_printf.h:11:0,
+                 from ../src/sources/../headers/types.h:5,
+                 from ../src/sources/../headers/ramInterface.h:6,
+                 from ../src/sources/../headers/rtc.h:9,
+                 from ../src/sources/rtc.c:3:
+../../project_bsp/ps7_cortexa9_0/include/xil_types.h:65:0: note: this is the location of the previous definition
+ #  define TRUE  1U
+ 
+../src/sources/rtc.c: In function 'interruptTask':
+../src/sources/rtc.c:58:5: warning: operation on 'iB' may be undefined [-Wsequence-point]
+  iB =
+  ~~~^
+  iB = -0.104205583519848;      // Temporary
+  ~~~~~~~~~~~~~~~~~~~~~~~
+../src/sources/rtc.c:83:19: warning: unused variable 'dcC' [-Wunused-variable]
+  double dcA, dcB, dcC;
+                   ^~~
+../src/sources/rtc.c:83:14: warning: unused variable 'dcB' [-Wunused-variable]
+  double dcA, dcB, dcC;
+              ^~~
+../src/sources/rtc.c:83:9: warning: unused variable 'dcA' [-Wunused-variable]
+  double dcA, dcB, dcC;
+         ^~~
+../src/sources/rtc.c:49:9: warning: variable 'angle' set but not used [-Wunused-but-set-variable]
+  double angle;
+         ^~~~~
+In file included from ../src/sources/../headers/rtc.h:14:0,
+                 from ../src/sources/rtc.c:3:
+../src/sources/rtc.c: At top level:
+../src/sources/../headers/pi_controller.h:38:15: warning: 'setKp' declared 'static' but never defined [-Wunused-function]
+ static double setKp(Controller *c, double _kp);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:39:15: warning: 'setKi' declared 'static' but never defined [-Wunused-function]
+ static double setKi(Controller *c, double _ki);
+               ^~~~~
+../src/sources/../headers/pi_controller.h:40:15: warning: 'setLastOutput' declared 'static' but never defined [-Wunused-function]
+ static double setLastOutput(Controller *c, double _outputOld);
+               ^~~~~~~~~~~~~
+../src/sources/../headers/pi_controller.h:41:15: warning: 'setLastInput' declared 'static' but never defined [-Wunused-function]
+ static double setLastInput(Controller *c, double _inputOld);
+               ^~~~~~~~~~~~
+In file included from ../src/sources/../headers/isr.h:13:0,
+                 from ../src/sources/../headers/rtc.h:15,
+                 from ../src/sources/rtc.c:3:
+../src/sources/../headers/adc.h:25:16: warning: 'XAdcInstPtr' defined but not used [-Wunused-variable]
+ static XAdcPs *XAdcInstPtr;  /* Pointer to driver istance */
+                ^~~~~~~~~~~
+../src/sources/../headers/adc.h:24:15: warning: 'XAdcInst' defined but not used [-Wunused-variable]
+ static XAdcPs XAdcInst;      /* XADC driver instance */
+               ^~~~~~~~
+Finished building: ../src/sources/rtc.c
  
 Building target: project.elf
 Invoking: ARM v7 gcc linker
@@ -15,9 +85,9 @@ Finished building target: project.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size project.elf  |tee "project.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  85468	   2588	  23520	 111576	  1b3d8	project.elf
+  85056	   2588	  23504	 111148	  1b22c	project.elf
 Finished building: project.elf.size
  
 
-21:40:47 Build Finished (took 361ms)
+13:18:53 Build Finished (took 564ms)
 

@@ -6,7 +6,7 @@ use ieee.std_logic_unsigned.all;
 
 entity top is
     port ( clk          : in  std_logic := '0';
-    sw          : in  std_logic_vector (3 downto 0);
+--    sw          : in  std_logic_vector (3 downto 0);
     red         : out STD_LOGIC_VECTOR (7 downto 0);
     green       : out STD_LOGIC_VECTOR (7 downto 0);
     blue        : out STD_LOGIC_VECTOR (7 downto 0);
@@ -40,7 +40,10 @@ architecture Behavioral of top is
     -- Memory interface
     component mem_interface is
         Port ( 
-                clk          : in  std_logic
+                clk          : in  std_logic;
+                dcA          : out signed(10 downto 0);
+                dcB          : out signed(10 downto 0);
+                dcC          : out signed(10 downto 0)
                );
     end component;
     
@@ -49,76 +52,57 @@ architecture Behavioral of top is
     -- PWM freq
     signal pwm_freq             : std_logic;
     signal duty_cycle_signal    : signed(10 downto 0);
+    
+    signal signal_dcA           : signed(10 downto 0);
+    signal signal_dcB           : signed(10 downto 0);
+    signal signal_dcc           : signed(10 downto 0);
+    
 begin
 
 -- Set row
 row <= "11111110";
 
 
--- Select PWM frequency dependign 
-with sw select
-    duty_cycle_signal <=    "00000000000" when "0000",
-                            "00000000001" when "0001",
-                            "00000000010" when "0010",
-                            "00000000011" when "0011",
-                            "00000000100" when "0100",
-                            "00000000101" when "0101",
-                            "00000000110" when "0110",
-                            "00000000111" when "0111",
-                            "00001011101" when "1000",
-                            "00001011110" when "1001",
-                            "00001011111" when "1010",
-                            "00001100000" when "1011",
-                            "00001100001" when "1100",
-                            "00001100010" when "1101",
-                            "00001100011" when "1110",
-                            "00001100100" when "1111",
-                            "00000000000" when others;
---    duty_cycle_signal <=    "00000000000" when "0000",  -- 000
---                            "00000011001" when "0001",  -- 25
---                            "00000110010" when "0011",  -- 50
---                            "00001001011" when "0111",  -- 75
---                            "00001011111" when "1100",  -- 95
---                            "00001011110" when "1110",  -- 94
---                            "00001100100" when "1111",  -- 100
---                            "00000000000" when others;
 
--- Phase 1. 0 degrees phase shift
+-- Phase 1. 
 pwm_dual0:pwm_dual
 port map(
            clk            => clk,
-           duty_cycle     => duty_cycle_signal, 
-           pwm_high       => red(6),
-           pwm_low        => red(4),
-           pwm_high_middle=> green(6),
-           pwm_low_middle => green(4)
+           duty_cycle     => signal_dcA, 
+           pwm_high       => red(0),
+           pwm_low        => red(2),
+           pwm_high_middle=> red(4),
+           pwm_low_middle => red(6)
 );
 
--- Phase 2. 120 degrees phase shift
+-- Phase 2.
 pwm_dual1:pwm_dual
 port map(
            clk            => clk,
-           duty_cycle     => duty_cycle_signal,
-           pwm_high       => red(2),
-           pwm_low        => red(0),
-           pwm_high_middle=> green(2),
-           pwm_low_middle => green(0)
+           duty_cycle     => signal_dcB,
+           pwm_high       => green(0),
+           pwm_low        => green(2),
+           pwm_high_middle=> green(4),
+           pwm_low_middle => green(6)
 );
 
----- Phase 3. 240 degrees phase shift
---pwm_dual2:pwm_dual
---port map(
---           clk            => clk,
---           duty_cycle     => "00111110100", -- 50%
---           pwm_high       => blue(6),
---           pwm_low        => green(5),
---           pwm_high_middle=> green(6),
---           pwm_low_middle => green(7)
---);
+-- Phase 3
+pwm_dual2:pwm_dual
+port map(
+           clk            => clk,
+           duty_cycle     => signal_dcC,
+           pwm_high       => blue(0),
+           pwm_low        => blue(2),
+           pwm_high_middle=> blue(4),
+           pwm_low_middle => blue(6)
+);
 
 mem_interface0: mem_interface
 port map(
-    clk => clk
+    clk => clk,
+    dcA  => signal_dcA,
+    dcB  => signal_dcB,
+    dcC  => signal_dcC
 );
 
 

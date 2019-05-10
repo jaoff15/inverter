@@ -96,7 +96,7 @@ end design_1_xadc_wiz_0_0;
 architecture xilinx of design_1_xadc_wiz_0_0 is
 
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of xilinx : architecture is "design_1_xadc_wiz_0_0,xadc_wiz_v3_3_5,{component_name=design_1_xadc_wiz_0_0,enable_axi=true,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=false,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=on,startup_channel_selection=contineous_sequence}";
+  attribute CORE_GENERATION_INFO of xilinx : architecture is "design_1_xadc_wiz_0_0,xadc_wiz_v3_3_5,{component_name=design_1_xadc_wiz_0_0,enable_axi=true,enable_axi4stream=false,dclk_frequency=100,enable_busy=true,enable_convst=false,enable_convstclk=false,enable_dclk=true,enable_drp=false,enable_eoc=true,enable_eos=true,enable_vbram_alaram=false,enable_vccddro_alaram=false,enable_Vccint_Alaram=false,enable_Vccaux_alaram=falseenable_vccpaux_alaram=false,enable_vccpint_alaram=false,ot_alaram=false,user_temp_alaram=false,timing_mode=continuous,channel_averaging=None,sequencer_mode=off,startup_channel_selection=single_channel}";
 
 
   component design_1_xadc_wiz_0_0_axi_xadc 

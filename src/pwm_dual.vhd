@@ -15,7 +15,7 @@ use ieee.numeric_std.all;
 
 entity pwm_dual is
     Port ( clk            : in  std_logic;                              -- Input clock
-		   duty_cycle 	  : in  signed(10 downto 0);                    -- duty_cycle*100. 501 => 0.501 = 50.1%
+		   duty_cycle 	  : in  signed(10 downto 0);                    -- duty_cycle*100. 50 => 0.50 = 50%
            pwm_high       : out std_logic;                              -- Output PWM high signal
            pwm_low        : out std_logic;                              -- Output PWM low signal
            pwm_high_middle: out std_logic;                              -- Outputs a pulse on the middle of the high-side PWM

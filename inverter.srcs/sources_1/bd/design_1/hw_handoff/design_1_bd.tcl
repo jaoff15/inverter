@@ -594,12 +594,12 @@ proc create_root_design { parentCell } {
    CONFIG.ENABLE_VCCPINT_ALARM {false} \
    CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
    CONFIG.OT_ALARM {false} \
-   CONFIG.SEQUENCER_MODE {Continuous} \
+   CONFIG.SEQUENCER_MODE {Off} \
    CONFIG.SINGLE_CHANNEL_SELECTION {TEMPERATURE} \
    CONFIG.USER_TEMP_ALARM {false} \
    CONFIG.VCCAUX_ALARM {false} \
    CONFIG.VCCINT_ALARM {false} \
-   CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \
+   CONFIG.XADC_STARUP_SELECTION {single_channel} \
  ] $xadc_wiz_0
 
   # Create interface connections

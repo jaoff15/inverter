@@ -1,0 +1,23 @@
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+Block Memory Generator module sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.blk_mem_gen_0.inst.native_mem_mapped_module.blk_mem_gen_v8_4_1_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.M_AXI_GP0.master
+[0] : *ZYNQ_VIP_INFO : M_AXI_GP0 : Port is ENABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.M_AXI_GP1.master
+[0] : *ZYNQ_VIP_INFO : M_AXI_GP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_GP0.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_GP0 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_GP1.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_GP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_HP0.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP0 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_HP1.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP1 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_HP2.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP2 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_HP3.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_HP3 : Port is DISABLED.
+XilinxAXIVIP: Found at Path: sim_tb.uut.mem_interface0.design_1_wrapper0.design_1_i.processing_system7_0.inst.S_AXI_ACP.slave
+[0] : *ZYNQ_VIP_INFO : S_AXI_ACP : Port is DISABLED.
+Warning: *** Warning: The analog data file for XADC was not found. Use the SIM_MONITOR_FILE generic to specify the input analog data file name or use default name: design.txt. 
+Time: 0 ps  Iteration: 0  Process: /sim_tb/uut/mem_interface0/design_1_wrapper0/design_1_i/xadc_wiz_0/U0/AXI_XADC_CORE_I/XADC_INST/READFILE_P  File: /home/jacoboffersen/Program/vivado20182/Vivado/2018.2/data/vhdl/src/unisims/primitive/XADC.vhd

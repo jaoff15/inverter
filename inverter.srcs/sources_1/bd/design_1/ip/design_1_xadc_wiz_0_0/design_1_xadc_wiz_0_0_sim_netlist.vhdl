@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Tue Apr 23 09:18:38 2019
+-- Date        : Fri May 10 10:29:54 2019
 -- Host        : jacoboffersen running 64-bit Ubuntu 18.04.2 LTS
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_sim_netlist.vhdl
@@ -3465,14 +3465,14 @@ begin
 XADC_INST: unisim.vcomponents.XADC
     generic map(
       INIT_40 => X"0000",
-      INIT_41 => X"21AF",
+      INIT_41 => X"31AF",
       INIT_42 => X"0400",
       INIT_43 => X"0000",
       INIT_44 => X"0000",
       INIT_45 => X"0000",
       INIT_46 => X"0000",
       INIT_47 => X"0000",
-      INIT_48 => X"0000",
+      INIT_48 => X"0100",
       INIT_49 => X"0000",
       INIT_4A => X"0000",
       INIT_4B => X"0000",
