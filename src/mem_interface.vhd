@@ -70,7 +70,7 @@ begin
        elsif state = STATE_SETUP then
             
             -- Update address
-            addr(1 downto 0) <= std_logic_vector(counter);
+            addr(3 downto 2) <= std_logic_vector(counter);
             
             -- Increment memory counter
             counter <= counter + 1;
@@ -84,20 +84,20 @@ begin
        elsif state = STATE_LATCH then
 
             -- Read from memory
-            if counter = "01" then
+            if addr(3 downto 0) = "0100" then
                 value_dcA <= signed(data_out(10 downto 0));
                 --value_dcA <= "00000001000";
-            elsif counter = "10" then
+            elsif addr(3 downto 0) = "1000" then
                 value_dcB <= signed(data_out(10 downto 0));
                 --value_dcB <= "00000011000";
-            elsif counter = "11" then
+            elsif addr(3 downto 0) = "1100" then
                 value_dcC <= signed(data_out(10 downto 0));
                 --value_dcC <= "00000001100";
             end if;
             
 
            -- If max has been reached go into ready state
-            if counter = "11" then    
+            if addr(3 downto 0) = "1100" then    
                 state   <= STATE_READY;
             else 
                 

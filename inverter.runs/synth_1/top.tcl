@@ -46,6 +46,12 @@ set_property used_in_implementation false [get_files -all /home/jacoboffersen/Re
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/bd_afc3_s00a2s_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/bd_afc3_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/bd_afc3_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_32/bd_afc3_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/bd_afc3_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/bd_afc3_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/bd_afc3_m02bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_24/bd_afc3_m01arn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_25/bd_afc3_m01rn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_26/bd_afc3_m01awn_0_ooc.xdc]
@@ -72,6 +78,8 @@ set_property used_in_implementation false [get_files -all /home/jacoboffersen/Re
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

@@ -1,17 +1,3 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/sim/design_1_processing_system7_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_blk_mem_gen_0_0/sim/design_1_blk_mem_gen_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_1_blk_mem_gen_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bd_afc3
-INFO: [VRFC 10-311] analyzing module clk_map_imp_5Y9LOC
-INFO: [VRFC 10-311] analyzing module m00_exit_pipeline_imp_1TZX5BB
-INFO: [VRFC 10-311] analyzing module m00_nodes_imp_1GOYQYZ
-INFO: [VRFC 10-311] analyzing module m01_exit_pipeline_imp_1XMPFJB
-INFO: [VRFC 10-311] analyzing module m01_nodes_imp_94N5OD
-INFO: [VRFC 10-311] analyzing module s00_entry_pipeline_imp_USCCV8
-INFO: [VRFC 10-311] analyzing module s00_nodes_imp_Y7M43I
-INFO: [VRFC 10-311] analyzing module switchboards_imp_4N4PBE
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/sim/bd_afc3_s00a2s_0.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bd_afc3_s00a2s_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_16/sim/bd_afc3_m00s2a_0.sv" into library xil_defaultlib
@@ -68,5 +54,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/jacoboffersen/Repos/inv
 INFO: [VRFC 10-311] analyzing module bd_afc3_wsw_0
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/sim/bd_afc3_bsw_0.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module bd_afc3_bsw_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/jacoboffersen/Repos/inverter/inverter.ip_user_files/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/sim/bd_afc3_one_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bd_afc3_one_0

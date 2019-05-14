@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
--- Date        : Tue Apr 23 09:40:59 2019
+-- Date        : Mon May 13 21:18:08 2019
 -- Host        : jacoboffersen running 64-bit Ubuntu 18.04.2 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_stub.vhdl

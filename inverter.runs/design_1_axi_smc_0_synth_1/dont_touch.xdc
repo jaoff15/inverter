@@ -19,27 +19,6 @@
 # IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_m02s2a_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m03s2a_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_43/bd_afc3_m03e_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m03arn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m03rn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/bd_afc3_m03awn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/bd_afc3_m03wn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/bd_afc3_m03bn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
 # IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/bd_afc3_m02e_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
@@ -146,18 +125,6 @@
 # XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_m01s2a_0_ooc.xdc
 
 # XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_m02s2a_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m03s2a_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m03arn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m03rn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/bd_afc3_m03awn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/bd_afc3_m03wn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/bd_afc3_m03bn_0_ooc.xdc
 
 # XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/bd_afc3_m02arn_0_ooc.xdc
 
@@ -237,27 +204,6 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_m02s2a_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m03s2a_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_43/bd_afc3_m03e_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m03arn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m03rn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/bd_afc3_m03awn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/bd_afc3_m03wn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
-# IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/bd_afc3_m03bn_0.xci
-# DONT_TOUCH constraint suppressed by (parent) sub-design file.
-
 # IP: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/bd_afc3_m02e_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
@@ -364,18 +310,6 @@ set_property DONT_TOUCH TRUE [get_cells inst -quiet] -quiet
 # XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_23/bd_afc3_m01s2a_0_ooc.xdc
 
 # XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/bd_afc3_m02s2a_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/bd_afc3_m03s2a_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/bd_afc3_m03arn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/bd_afc3_m03rn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/bd_afc3_m03awn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/bd_afc3_m03wn_0_ooc.xdc
-
-# XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/bd_afc3_m03bn_0_ooc.xdc
 
 # XDC: /home/jacoboffersen/Repos/inverter/inverter.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/bd_afc3_m02arn_0_ooc.xdc
 
